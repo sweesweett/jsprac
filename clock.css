@@ -16,7 +16,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  background-color: aquamarine;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -46,7 +45,7 @@
 .hour {
   width: 150px;
   height: 150px;
-  transform: rotateZ(35deg);
+
   z-index: 5;
 }
 .hour::before {
@@ -58,28 +57,26 @@
   border-radius: 50% 50% 0 0;
 }
 .minute {
-  width: 180px;
-  height: 180px;
-  transform: rotateZ(50deg);
+  width: 200px;
+  height: 200px;
   z-index: 4;
 }
 .minute::before {
   content: '';
   position: absolute;
-  width: 5px;
+  width: 7px;
   height: 50%;
+  border-radius: 50% 50% 0 0;
   background-color: aqua;
 }
 .second {
   width: 280px;
   height: 270px;
-  background-color: beige;
-  transform: rotateZ(80deg);
 }
 .second::before {
   content: '';
   position: absolute;
   width: 4px;
   height: 60%;
-  background-color: aqua;
+  background-color: red;
 }
