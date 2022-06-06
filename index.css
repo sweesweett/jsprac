@@ -1,6 +1,11 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
 }
 body {
   background: rgb(255, 166, 217);
@@ -12,28 +17,42 @@ body {
 }
 section {
   max-width: 700px;
+  height: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+
   padding: 30px;
 }
 section h2 {
+  padding: 10px;
+  text-align: center;
+}
+section .practice__wrapper {
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px;
 }
 section .btns {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  margin-top: 20px;
 }
 section .btns button {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 161, 232, 0.3);
+  color: rgb(250, 119, 217);
   padding: 10px 5px;
-  border: 2px solid black;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 700;
 }
 .custom-shape-divider-top-1654431782 {
   fill: #ff648b81;
