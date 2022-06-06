@@ -99,7 +99,19 @@ h2 {
   height: 60%;
   background-color: red;
 }
-
+.clock__digital__container {
+  width: 700px;
+  height: 400px;
+  /* display: flex; */
+  border: 3px solid black;
+  display: none;
+}
+.clock__digital__container .digital {
+  width: 150px;
+  height: 100px;
+  background-color: aqua;
+  margin: 10px;
+}
 .btns {
   position: fixed;
   bottom: 20%;
