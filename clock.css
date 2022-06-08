@@ -2,13 +2,24 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background: rgb(166, 227, 255);
+  background: linear-gradient(
+    120deg,
+    rgb(166, 227, 255) 0%,
+    rgba(255, 209, 193, 1) 100%
+  );
+}
 .gotoback {
   display: inline-block;
   margin: 30px;
   padding: 10px;
   font-weight: 700;
-  position: relative;
+  position: fixed;
+  left: 30px;
+  top: 50px;
   cursor: pointer;
+  color: rgb(5, 1, 17);
 }
 .gotoback::after {
   content: '';
@@ -16,7 +27,8 @@
   left: 15px;
   width: 80px;
   height: 20px;
-  background-color: rgba(127, 255, 212, 0.767);
+  background-color: rgba(255, 166, 217, 0.767);
+
   z-index: -1;
 }
 .container {
@@ -24,11 +36,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: antiquewhite;
 }
 h2 {
   text-align: center;
   font-size: 16px;
+}
+.container .clock__analog__background {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 .container .clock__analog__container {
   background-image: url(./img/clock.png);
@@ -38,11 +54,15 @@ h2 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  margin: 10px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(5px -4px 3px gray);
+  /* box-shadow: 4px 4px 7px 4px rgba(255, 255, 255, 0.1),
+    -4px -4px 7px 4px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 7px 4px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 7px 4px rgba(0, 0, 0, 0.1); */
 }
 .container .clock__analog__container::before {
   content: '';
@@ -70,34 +90,38 @@ h2 {
 .hour::before {
   content: '';
   position: absolute;
-  width: 10px;
+  width: 5px;
   height: 50%;
-  background-color: black;
+  background-color: rgb(211, 211, 211);
+  filter: drop-shadow(2px 5px 0px rgba(228, 227, 221, 0.76));
   border-radius: 50% 50% 0 0;
 }
 .minute {
-  width: 230px;
-  height: 230px;
+  width: 220px;
+  height: 220px;
   z-index: 4;
 }
 .minute::before {
   content: '';
   position: absolute;
-  width: 7px;
+  width: 4px;
   height: 50%;
   border-radius: 50% 50% 0 0;
-  background-color: aqua;
+  background-color: rgb(211, 211, 211);
+  filter: drop-shadow(2px 3px 0px rgba(155, 153, 122, 0.76));
 }
 .second {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
 }
 .second::before {
   content: '';
   position: absolute;
-  width: 4px;
+  width: 3px;
   height: 60%;
-  background-color: red;
+  border-radius: 2px;
+  background-color: lightgray;
+  filter: drop-shadow(1px 2px 0px rgba(155, 153, 122, 0.76));
 }
 .clock__digital__container {
   width: 700px;
@@ -117,4 +141,7 @@ h2 {
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
+}
+.custom-shape-divider-top-1654431782 {
+  fill: rgba(94, 190, 197, 0.664);
 }
