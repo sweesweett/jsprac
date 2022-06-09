@@ -1,7 +1,7 @@
 const btns = document.querySelector('.btns');
 
 btns.onclick = (e) => {
-  const analogContainer = document.querySelector('.clock__analog__container');
+  const analogContainer = document.querySelector('.clock__analog__background');
   const digitalContainer = document.querySelector('.clock__digital__container');
   if (e.target.className === 'analog') {
     analogContainer.style.display = 'flex';

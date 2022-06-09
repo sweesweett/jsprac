@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: rgb(166, 227, 255);
+  background: rgba(255, 209, 193, 1);
   background: linear-gradient(
     120deg,
     rgb(166, 227, 255) 0%,
@@ -39,7 +39,8 @@ body {
 }
 h2 {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
+  margin: 20px;
 }
 .container .clock__analog__background {
   width: 300px;
@@ -47,7 +48,7 @@ h2 {
   border-radius: 50%;
 }
 .container .clock__analog__container {
-  background-image: url(./img/clock.png);
+  background-image: url(./img/clock2.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -58,7 +59,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(5px -4px 3px gray);
+  filter: drop-shadow(4px -2px 3px gray);
   /* box-shadow: 4px 4px 7px 4px rgba(255, 255, 255, 0.1),
     -4px -4px 7px 4px rgba(0, 0, 0, 0.1),
     inset 2px 2px 7px 4px rgba(255, 255, 255, 0.1),
@@ -93,7 +94,7 @@ h2 {
   width: 5px;
   height: 50%;
   background-color: rgb(211, 211, 211);
-  filter: drop-shadow(2px 5px 0px rgba(228, 227, 221, 0.76));
+  filter: drop-shadow(2px -1px 1px rgb(228, 227, 221));
   border-radius: 50% 50% 0 0;
 }
 .minute {
@@ -108,7 +109,7 @@ h2 {
   height: 50%;
   border-radius: 50% 50% 0 0;
   background-color: rgb(211, 211, 211);
-  filter: drop-shadow(2px 3px 0px rgba(155, 153, 122, 0.76));
+  filter: drop-shadow(2px -1px 1px rgb(228, 227, 221));
 }
 .second {
   width: 260px;
@@ -120,13 +121,12 @@ h2 {
   width: 3px;
   height: 60%;
   border-radius: 2px;
-  background-color: lightgray;
-  filter: drop-shadow(1px 2px 0px rgba(155, 153, 122, 0.76));
+  background-color: rgb(211, 211, 211);
+  filter: drop-shadow(2px -1px 1px rgb(228, 227, 221));
 }
 .clock__digital__container {
-  width: 700px;
-  height: 400px;
-  /* display: flex; */
+  width: 500px;
+  display: flex;
   border: 3px solid black;
   display: none;
 }
@@ -137,8 +137,8 @@ h2 {
   margin: 10px;
 }
 .btns {
-  position: fixed;
-  bottom: 20%;
+  position: absolute;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
