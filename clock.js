@@ -48,7 +48,7 @@ function setDigitalClock() {
   };
 
   if (getHours > 12) {
-    getHours = issmaller10(24 - getHours);
+    getHours = issmaller10(getHours - 12);
     isAmPm = 'PM';
   }
 
