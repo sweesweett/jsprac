@@ -3,12 +3,15 @@ const btns = document.querySelector('.btns');
 btns.onclick = (e) => {
   const analogContainer = document.querySelector('.clock__analog__background');
   const digitalContainer = document.querySelector('.clock__digital__container');
+  const title = document.querySelector('.title');
   if (e.target.className === 'analog') {
     analogContainer.style.display = 'flex';
     digitalContainer.style.display = 'none';
+    title.textContent = `${e.target.className.toUpperCase()} ClOCK`;
   } else if (e.target.className === 'digital') {
     analogContainer.style.display = 'none';
     digitalContainer.style.display = 'flex';
+    title.textContent = `${e.target.className.toUpperCase()} ClOCK`;
   }
 };
 
