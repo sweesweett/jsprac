@@ -6,6 +6,7 @@
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
     'Malgun Gothic', sans-serif;
+  letter-spacing: 2px;
 }
 body {
   background: rgb(255, 166, 217);
@@ -39,6 +40,7 @@ section .practice__wrapper {
   justify-content: center;
   padding: 10px;
 }
+
 section .btns {
   display: flex;
   justify-content: space-around;
@@ -46,14 +48,21 @@ section .btns {
   margin-top: 20px;
 }
 section .btns button {
-  background-color: rgba(255, 161, 232, 0.3);
-  color: rgb(250, 119, 217);
-  padding: 10px 5px;
+  font-size: 16px;
+  padding: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(94, 190, 197);
+  color: white;
+  box-shadow: inset 2px 2px 3px 0px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 3px 0px rgba(255, 255, 255, 0.2);
+}
+.btns button:active {
+  background-color: rgb(86, 177, 184);
+  box-shadow: inset 1px 1px 5px 0px rgba(44, 44, 44, 0.2),
+    inset -1px -1px 5px 0px rgba(44, 44, 44, 0.2);
 }
 .custom-shape-divider-top-1654431782 {
-  fill: #ff648b81;
+  fill: rgba(94, 190, 197, 0.664);
 }

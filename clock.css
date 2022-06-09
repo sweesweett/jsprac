@@ -11,7 +11,7 @@
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
     'Malgun Gothic', sans-serif;
-
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
 }
@@ -174,9 +174,30 @@ h2 {
 
 .btns {
   position: absolute;
-  bottom: -30px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+}
+.btns button {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(94, 190, 197);
+  color: white;
+  box-shadow: inset 2px 2px 3px 0px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 3px 0px rgba(255, 255, 255, 0.2);
+}
+
+.btns button:last-child {
+  margin-left: 10px;
+}
+.btns button:active {
+  background-color: rgb(86, 177, 184);
+  box-shadow: inset 1px 1px 5px 0px rgba(44, 44, 44, 0.2),
+    inset -1px -1px 5px 0px rgba(44, 44, 44, 0.2);
 }
 .custom-shape-divider-top-1654431782 {
   fill: rgba(94, 190, 197, 0.664);
