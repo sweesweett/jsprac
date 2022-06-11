@@ -17,6 +17,7 @@ body {
   );
 }
 section {
+  min-width: 300px;
   max-width: 700px;
   height: 400px;
   position: absolute;
@@ -46,10 +47,12 @@ section .btns {
   justify-content: space-around;
   padding: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 section .btns button {
   font-size: 16px;
-  padding: 10px;
+  padding: 5px;
+  margin: 10px;
   border: none;
   cursor: pointer;
   border-radius: 5px;

@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock! TikTok</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./common.css" />
-    <link rel="stylesheet" href="./clock.css" />
-    <script defer src="./clock.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./rocksp.js"></script>
   </head>
   <body>
     <div class="gotoback" onclick="location.href='/'">뒤로가기</div>
     <section class="container">
-      <h2 class="title">ALALOG CLOCK</h2>
-      <div class="clock__analog__background">
-        <div class="clock__analog__container">
-          <div class="hour"></div>
-          <div class="minute"></div>
-          <div class="second"></div>
+      <div>
+        <div
+          class="test"
+          style="width: 300px; height: 300px; background-color: gray"
+        >
+          <div class="test_1">
+            <i></i>
+          </div>
+          <div class="test_2" style="display: none">
+            <i></i>
+          </div>
         </div>
+        <div class="btn"></div>
+        <button class="test1">시작!</button>
+        <button class="test2">끝</button>
+        <!-- <i class="fa-solid fa-hand-back-fist"></i>
+        <i class="fa-solid fa-hand-scissors"></i>
+        <i class="fa-solid fa-hand"></i> -->
       </div>
-      <div class="clock__digital__container">
-        <div class="digital hours"></div>
-        <div class="digital minutes"></div>
-        <div class="digital seconds"></div>
-        <div class="digital ampm"></div>
-      </div>
-      <div class="btns">
-        <button class="analog">ANALOG</button>
-        <button class="digital">DIGITAL</button>
-      </div>
+      <div></div>
     </section>
-
     <div class="custom-shape-divider-top-1654431782">
       <svg
         data-name="Layer 1"

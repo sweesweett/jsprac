@@ -1,0 +1,55 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+  font-family: 'LAB디지털';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgba(255, 209, 193, 1);
+  background: linear-gradient(
+    120deg,
+    rgb(166, 227, 255) 0%,
+    rgba(255, 209, 193, 1) 100%
+  );
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gotoback {
+  display: inline-block;
+  margin: 30px;
+  padding: 10px;
+  font-weight: 700;
+  position: fixed;
+  left: 30px;
+  top: 50px;
+  cursor: pointer;
+  color: rgb(5, 1, 17);
+}
+.gotoback::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  width: 80px;
+  height: 20px;
+  background-color: rgba(255, 166, 217, 0.767);
+
+  z-index: -1;
+}
+.custom-shape-divider-top-1654431782 {
+  fill: rgba(94, 190, 197, 0.664);
+}
