@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./rocksp.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -18,11 +19,42 @@
   <body>
     <div class="gotoback" onclick="location.href='/'">뒤로가기</div>
     <section class="container">
-      <div>
-        <div
-          class="test"
-          style="width: 300px; height: 300px; background-color: gray"
-        >
+      <h2 class="game__name">가위바위보!</h2>
+      <h3 class="result__message">YOU WIN!</h3>
+      <div class="game__display">
+        <div class="computer side">
+          <div class="computer__score score"></div>
+          <div class="computer result 1" id="toShowNotResult"><i></i></div>
+          <div class="computer result 2" id="realResult"><i></i></div>
+        </div>
+        <div class="user side">
+          <div class="user__score score"></div>
+          <div class="user result" id="userResult"><i></i></div>
+        </div>
+      </div>
+      <ul class="btns">
+        <li>
+          <button class="btn scissors">
+            <i class="fa-solid fa-hand-scissors"></i>
+          </button>
+          <span>가위</span>
+        </li>
+        <li>
+          <button class="btn rock">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+          <span>바위</span>
+        </li>
+        <li>
+          <button class="btn paper">
+            <i class="fa-solid fa-hand"></i>
+          </button>
+          <span>보</span>
+        </li>
+      </ul>
+      <button class="restart">다시하기</button>
+      <!-- <div style="display: none">
+        <div class="test">
           <div class="test_1">
             <i></i>
           </div>
@@ -30,12 +62,27 @@
             <i></i>
           </div>
         </div>
-        <div class="btn"></div>
-        <button class="test1">시작!</button>
-        <button class="test2">끝</button>
-        <!-- <i class="fa-solid fa-hand-back-fist"></i>
-        <i class="fa-solid fa-hand-scissors"></i>
-        <i class="fa-solid fa-hand"></i> -->
+        <ul class="btns">
+          <li>
+            <button class="btn scissors">
+              <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+            <span>가위</span>
+          </li>
+          <li>
+            <button class="btn rock">
+              <i class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <span>바위</span>
+          </li>
+          <li>
+            <button class="btn paper">
+              <i class="fa-solid fa-hand"></i>
+            </button>
+            <span>보</span>
+          </li>
+        </ul>
+        <button class="restart">다시하기</button> -->
       </div>
       <div></div>
     </section>
