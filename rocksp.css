@@ -1,8 +1,8 @@
+* {
+  list-style: none;
+}
 .game__display {
   background-color: aqua;
-}
-.game__name {
-  text-align: center;
 }
 .result__message {
   text-align: center;
