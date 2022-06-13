@@ -1,8 +1,12 @@
 * {
   list-style: none;
+  box-sizing: border-box;
 }
-.game__display {
-  background-color: aqua;
+button > i {
+  font-size: 50px;
+}
+.container {
+  width: 350px;
 }
 .result__message {
   text-align: center;
@@ -12,23 +16,69 @@
   background-color: aliceblue;
 }
 .game__display {
+  background-color: aqua;
+  width: 350px;
   display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .game__display .side {
   margin: 10px;
+  width: 150px;
+  height: 150px;
   background-color: bisque;
+  box-sizing: border-box;
 }
 .game__display .side .score {
   text-align: center;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
   background-color: blueviolet;
 }
-.game__display .side .result {
-  width: 200px;
-  height: 200px;
+#toShowNotResult,
+#realResult,
+#userResult {
+  width: 150px;
+  font-size: 100px;
+  line-height: 130px;
+  text-align: center;
+  margin: auto;
 }
+
 .game__display .side #realResult {
   display: none;
 }
-.game__display .side .result > i {
+
+.container .btns {
+  display: flex;
+  margin-top: 20px;
+  padding: 15px 20px;
+  justify-content: space-between;
+}
+
+.container .btns li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 700;
+}
+.container .btns li > button {
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  transition: all ease 0.5s;
+}
+.container .btns li > button:hover {
+  background-color: rgb(121, 223, 121);
+  box-shadow: 0 8px 12px rgba(53, 133, 53, 0.3);
+  transform: translate(0, -10px);
+  color: white;
+}
+
+.container .btns li > i {
   font-size: 50px;
 }

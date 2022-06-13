@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>신나는 가위 바위 보!</title>
     <link rel="stylesheet" href="./common.css" />
     <link rel="stylesheet" href="./rocksp.css" />
     <link
@@ -23,12 +23,12 @@
       <div class="game__display">
         <div class="computer side">
           <div class="computer__score score"></div>
-          <div class="computer result 1" id="toShowNotResult"><i></i></div>
-          <div class="computer result 2" id="realResult"><i></i></div>
+          <div class="result computer 1" id="toShowNotResult"><i></i></div>
+          <div class="result computer 2" id="realResult"><i></i></div>
         </div>
         <div class="user side">
           <div class="user__score score"></div>
-          <div class="user result" id="userResult"><i></i></div>
+          <div class="result user" id="userResult"><i></i></div>
         </div>
       </div>
       <ul class="btns">
@@ -51,40 +51,12 @@
           <span>보</span>
         </li>
       </ul>
-      <button class="restart">다시하기</button>
-      <button class="initialization">점수초기화</button>
-      <!-- <div style="display: none">
-        <div class="test">
-          <div class="test_1">
-            <i></i>
-          </div>
-          <div class="test_2" style="display: none">
-            <i></i>
-          </div>
-        </div>
-        <ul class="btns">
-          <li>
-            <button class="btn scissors">
-              <i class="fa-solid fa-hand-scissors"></i>
-            </button>
-            <span>가위</span>
-          </li>
-          <li>
-            <button class="btn rock">
-              <i class="fa-solid fa-hand-back-fist"></i>
-            </button>
-            <span>바위</span>
-          </li>
-          <li>
-            <button class="btn paper">
-              <i class="fa-solid fa-hand"></i>
-            </button>
-            <span>보</span>
-          </li>
-        </ul>
-        <button class="restart">다시하기</button> -->
+      <div class="otherBtn">
+        <button class="restart">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <button class="initialization">초기화</button>
       </div>
-      <div></div>
     </section>
     <div class="custom-shape-divider-top-1654431782">
       <svg

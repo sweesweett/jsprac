@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background: rgba(255, 209, 193, 1);
   background: linear-gradient(
@@ -39,6 +40,7 @@ body {
   top: 50px;
   cursor: pointer;
   color: rgb(5, 1, 17);
+  z-index: 10;
 }
 .gotoback::after {
   content: '';

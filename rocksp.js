@@ -97,28 +97,25 @@ btns.addEventListener('click', (e) => {
 //게임 결과값
 function gameResult(result) {
   let localResult = JSON.parse(localStorage.getItem('result'));
-
-  console.log(localResult);
   if (result === 'win') {
-    resultMessage.textContent = 'YOU WIN!';
+    resultMessage.textContent = '이겼어요!';
     localResult.user = localResult.user + 1;
-    userScore.textContent = `you:${localResult.user}`;
-    console.log(localResult);
+    userScore.textContent = `you : ${localResult.user}`;
     localStorage.setItem('result', JSON.stringify(localResult));
   } else if (result === 'tie') {
-    resultMessage.textContent = "IT'S A TIE!";
+    resultMessage.textContent = '비겼어요!';
   } else {
-    resultMessage.textContent = 'YOU LOSE!';
+    resultMessage.textContent = '졌어요...';
     localResult.computer = localResult.computer + 1;
-    computerScore.textContent = `computer:${localResult.computer}`;
+    computerScore.textContent = `computer : ${localResult.computer}`;
     localStorage.setItem('result', JSON.stringify(localResult));
   }
 }
 initialization.addEventListener('click', () => {
   localStorage.setItem('result', JSON.stringify({ computer: 0, user: 0 }));
-  userScore.textContent = 'you:0';
-  computerScore.textContent = 'computer:0';
-  //초기화 하고 나면 자동으로 돌 수 있도록 해야겠음
+  userScore.textContent = 'you : 0';
+  computerScore.textContent = 'computer : 0';
+  resultMessage.textContent = '가위 바위 보!';
 });
 restart.addEventListener('click', () => {
   isRotate = true;
