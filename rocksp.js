@@ -105,13 +105,12 @@ function gameResult(result) {
     animateParticles({ total: 150 });
   } else if (result === 'tie') {
     resultMessage.textContent = '비겼어요!';
-
   } else {
     resultMessage.textContent = '졌어요...';
     localResult.computer = localResult.computer + 1;
     computerScore.textContent = `computer : ${localResult.computer}`;
     localStorage.setItem('result', JSON.stringify(localResult));
- 
+  }
 }
 initialization.addEventListener('click', () => {
   localStorage.setItem('result', JSON.stringify({ computer: 0, user: 0 }));
