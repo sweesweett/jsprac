@@ -44,12 +44,12 @@ function startInterval() {
   iconsResult.style.display = 'none';
   icons.style.display = 'block';
   itsInterval = setInterval(() => {
-    let xx = 0.2;
+    let xx = 0.1;
     test.forEach((el) => {
       setTimeout(() => (icons.className = el), xx * 1000);
-      xx += 0.2;
+      xx += 0.1;
     });
-  }, 100);
+  }, 300);
 }
 //interval 정지
 function stopInterval() {
