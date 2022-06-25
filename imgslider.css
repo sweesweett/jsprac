@@ -9,39 +9,54 @@
   overflow: hidden;
 }
 .container .img__wrapper {
-  width: 2000px;
+  width: 1500px;
   height: 250px;
   margin: 100px auto;
   background-color: bisque;
+  position: absolute;
+  /* left: -400px; */
 }
 .container .img__wrapper img {
   width: 400px;
   height: 200px;
+  background-color: blueviolet;
+}
+.container .img__wrapper img.img1 {
+  background-color: antiquewhite;
+}
+.container .img__wrapper img.img2 {
+  background-color: black;
+}
+.container .img__wrapper img.img3 {
+  background-color: blueviolet;
+}
+.container .img__wrapper img.img4 {
+  background-color: brown;
 }
 
-.container .img__wrapper .prevImg {
+/* .container .img__wrapper .prevImg {
   opacity: 0.8;
   position: absolute;
   bottom: 25px;
   left: 0;
-}
+} */
 .container .img__wrapper .active {
   width: 500px;
   height: 250px;
   background-color: blue;
   position: absolute;
-  left: 50%;
+  left: 150px;
   bottom: 50%;
-  transform: translate(-50%, 50%);
+  transform: translateY(50%);
   z-index: 5;
   opacity: 0.3;
 }
-.container .img__wrapper .nextImg {
+/* .container .img__wrapper .nextImg {
   opacity: 0.8;
   position: absolute;
   bottom: 25px;
   right: 0;
-}
+} */
 
 #prevBtn {
   position: absolute;
