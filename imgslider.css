@@ -27,6 +27,13 @@
   display: none;
   transition: all ease-out 0.7s;
 }
+.container .img__wrapper::after {
+  content: '사진출처: 메롱해치';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
 .container .img__wrapper img.img1 {
   background-color: aqua;
 }
@@ -42,8 +49,8 @@
 
 .container .img__wrapper .prev {
   position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   display: block;
   z-index: 3;
@@ -54,8 +61,8 @@
   background-color: blue;
   position: absolute;
   left: 150px;
-  bottom: 50%;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 5;
   display: block;
 }
@@ -63,8 +70,8 @@
   display: block;
   position: absolute;
   left: 400px;
-  bottom: 50%;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 3;
 }
 
@@ -78,6 +85,7 @@
   transform: translate(-50%, -50%);
   font-size: 32px;
   z-index: 10;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 #nextBtn {
   position: absolute;
@@ -90,4 +98,5 @@
   z-index: 10;
   transform: translate(50%, -50%);
   z-index: 10;
+  background-color: rgba(255, 255, 255, 0.6);
 }
