@@ -5,24 +5,30 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate((-50%, -50%));
+  transform: translate(-50%, -50%);
   overflow: hidden;
 }
+.container h2 {
+  text-align: center;
+  padding: 10px;
+}
 .container .img__wrapper {
-  width: 1500px;
+  width: 800px;
   height: 250px;
-  margin: 100px auto;
   background-color: bisque;
   position: absolute;
-  /* left: -400px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .container .img__wrapper img {
   width: 400px;
   height: 200px;
-  background-color: blueviolet;
+  display: none;
+  transition: all ease-out 0.7s;
 }
 .container .img__wrapper img.img1 {
-  background-color: antiquewhite;
+  background-color: aqua;
 }
 .container .img__wrapper img.img2 {
   background-color: black;
@@ -34,12 +40,14 @@
   background-color: brown;
 }
 
-/* .container .img__wrapper .prevImg {
-  opacity: 0.8;
+.container .img__wrapper .prev {
   position: absolute;
-  bottom: 25px;
+  bottom: 50%;
+  transform: translateY(50%);
   left: 0;
-} */
+  display: block;
+  z-index: 3;
+}
 .container .img__wrapper .active {
   width: 500px;
   height: 250px;
@@ -49,14 +57,16 @@
   bottom: 50%;
   transform: translateY(50%);
   z-index: 5;
-  opacity: 0.3;
+  display: block;
 }
-/* .container .img__wrapper .nextImg {
-  opacity: 0.8;
+.container .img__wrapper .next {
+  display: block;
   position: absolute;
-  bottom: 25px;
-  right: 0;
-} */
+  left: 400px;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 3;
+}
 
 #prevBtn {
   position: absolute;
