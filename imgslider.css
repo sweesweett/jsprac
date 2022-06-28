@@ -53,6 +53,7 @@
   transform: translateY(-50%);
   left: 0;
   display: block;
+
   z-index: 3;
 }
 .container .img__wrapper .active {
@@ -73,6 +74,27 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
+}
+.container .sliderCircle {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .sliderCircle > .circle {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(240, 255, 255, 0.6);
+  border-radius: 50%;
+  margin: 5px;
+}
+.container .sliderCircle > .circle.colored {
+  background-color: rgb(240, 255, 255);
 }
 
 #prevBtn {
