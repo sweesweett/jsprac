@@ -1,12 +1,12 @@
 .container {
   width: 800px;
   height: 400px;
-  background-color: aqua;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  background-color: rgba(136, 136, 136, 0.288);
 }
 .container h2 {
   text-align: center;
@@ -15,7 +15,6 @@
 .container .img__wrapper {
   width: 800px;
   height: 250px;
-  background-color: bisque;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,18 +32,6 @@
   top: 0;
   left: 0;
   font-size: 12px;
-}
-.container .img__wrapper img.img1 {
-  background-color: aqua;
-}
-.container .img__wrapper img.img2 {
-  background-color: black;
-}
-.container .img__wrapper img.img3 {
-  background-color: blueviolet;
-}
-.container .img__wrapper img.img4 {
-  background-color: brown;
 }
 
 .container .img__wrapper .prev {
