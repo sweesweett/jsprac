@@ -1,21 +1,19 @@
 const imgWrapper = document.querySelector('.img__wrapper');
 console.log(imgWrapper.children);
 let num = 1;
-plusMinus();
-function plusMinus() {
-  document.querySelector('#prevBtn').onclick = () => {
-    if (num === 1) {
-      num = imgWrapper.children.length;
-    } else num--;
-    moveTo();
-  };
-  document.querySelector('#nextBtn').onclick = () => {
-    if (num === imgWrapper.children.length) {
-      num = 1;
-    } else num++;
-    moveTo();
-  };
-}
+
+document.querySelector('#prevBtn').onclick = () => {
+  if (num === 1) {
+    num = imgWrapper.children.length;
+  } else num--;
+  moveTo();
+};
+document.querySelector('#nextBtn').onclick = () => {
+  if (num === imgWrapper.children.length) {
+    num = 1;
+  } else num++;
+  moveTo();
+};
 
 function moveTo() {
   document.querySelector('.colored').classList.remove('colored');

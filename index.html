@@ -11,18 +11,22 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <section>
+    <section class="practice__wrapper">
       <h2>JS Practice!</h2>
-      <div class="practice__wrapper">
+      <div>
         <p>여기는 Js+Html+css를 연습하기 위한 공간입니다!</p>
         <p>하나하나씩 추가할 예정이에요!</p>
-        <div class="btns">
-          <button onclick="location.href='./clock.html'">시계 보기</button>
-          <button onclick="location.href='./rocksp.html'">가위바위보!</button>
-          <button onclick="location.href='./imgslider.html'">
-            이미지 슬라이더
-          </button>
+        <!-- 드롭다운 구현 -->
+        오늘은
+        <div class="dropdown__list">
+          <span class="main__thing">시계보기</span>
+          <ul class="prac__list">
+            <li onclick="location.href='./clock.html'">시계보기</li>
+            <li onclick="location.href='./rocksp.html'">가위바위보!</li>
+            <li onclick="location.href='./imgslider.html'">이미지 슬라이더</li>
+          </ul>
         </div>
+        보러가기!
       </div>
     </section>
     <div class="custom-shape-divider-top-1654431782">
