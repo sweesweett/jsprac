@@ -27,44 +27,23 @@ section {
 
   padding: 30px;
 }
-section h2 {
-  padding: 10px;
+li {
+  list-style: none;
+}
+.practice__wrapper .prac {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  letter-spacing: 10px;
+}
+.practice__wrapper .prac .dropdown__list .visible:focus + .prac__list,
+.practice__wrapper .prac .dropdown__list .visible:active + .prac__list {
+  display: block;
+}
+.practice__wrapper .prac .dropdown__list .prac__list {
+  display: none;
+  position: absolute;
   text-align: center;
-}
-section .practice__wrapper {
-  height: 80%;
-  background-color: rgba(255, 255, 255, 0.1);
-
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
-}
-
-section .btns {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-section .btns button {
-  font-size: 16px;
-  padding: 5px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: rgb(94, 190, 197);
-  color: white;
-  box-shadow: inset 2px 2px 3px 0px rgba(255, 255, 255, 0.2),
-    inset -2px -2px 3px 0px rgba(255, 255, 255, 0.2);
-}
-.btns button:active {
-  background-color: rgb(86, 177, 184);
-  box-shadow: inset 1px 1px 5px 0px rgba(44, 44, 44, 0.2),
-    inset -1px -1px 5px 0px rgba(44, 44, 44, 0.2);
 }
 .custom-shape-divider-top-1654431782 {
   fill: rgba(94, 190, 197, 0.664);
