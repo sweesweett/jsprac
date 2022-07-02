@@ -1,5 +1,4 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +6,11 @@
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
     'Malgun Gothic', sans-serif;
   letter-spacing: 2px;
+  text-align: center;
+}
+span,
+li {
+  letter-spacing: 8px;
 }
 body {
   background: rgb(255, 166, 217);
@@ -34,16 +38,40 @@ li {
   display: flex;
   font-size: 30px;
   align-items: center;
-  letter-spacing: 10px;
+  margin: 20px;
 }
-.practice__wrapper .prac .dropdown__list .visible:focus + .prac__list,
-.practice__wrapper .prac .dropdown__list .visible:active + .prac__list {
-  display: block;
+.practice__wrapper .prac .dropdown__list .preview__ul {
+  border-bottom: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+}
+.practice__wrapper .prac .dropdown__list .preview__ul .toggle {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid transparent;
+  border-top: 8px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: transform 0.5s;
 }
 .practice__wrapper .prac .dropdown__list .prac__list {
   display: none;
   position: absolute;
   text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: aqua;
+}
+.practice__wrapper .prac .dropdown__list .prac__list li {
+  height: 0;
+  opacity: 0;
+  transition: all ease-out 0.4s;
 }
 .custom-shape-divider-top-1654431782 {
   fill: rgba(94, 190, 197, 0.664);
