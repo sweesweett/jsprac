@@ -63,15 +63,21 @@ li {
 .practice__wrapper .prac .dropdown__list .prac__list {
   display: none;
   position: absolute;
+  top: 170px;
   text-align: center;
   margin: 10px;
   padding: 10px;
-  background-color: aqua;
+  background-color: rgba(135, 135, 135, 0.2);
+  transition: display 0.8s;
 }
 .practice__wrapper .prac .dropdown__list .prac__list li {
   height: 0;
   opacity: 0;
-  transition: all ease-out 0.4s;
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+}
+.practice__wrapper .prac .dropdown__list .prac__list li:hover {
+  background-color: rgba(135, 135, 135, 0.6);
 }
 .custom-shape-divider-top-1654431782 {
   fill: rgba(94, 190, 197, 0.664);

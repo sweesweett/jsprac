@@ -15,15 +15,20 @@ previewUl.addEventListener('click', () => {
   }
 });
 pracList.addEventListener('mouseleave', () => {
-  pracList.style.display = 'none';
   toggle.style.transform = 'translateY(-50%) rotate(0deg)';
   toggle.style.top = '50%';
   let time = 0;
-  for (let el of pracList.children) {
+  for (let i = pracList.children.length - 1; i >= 0; i--) {
     setTimeout(() => {
-      el.style.height = '0';
-      el.style.opacity = '0';
-    }, time + 600);
+      pracList.children[i].style.height = '0';
+      pracList.children[i].style.opacity = '0';
+    }, time);
+    time += 100;
   }
+  setTimeout(() => {
+    pracList.style.display = 'none';
+  }, 500);
+
+  //
 });
 // 왜 mouseout 안쓰냐? -> 자식요소에도 적용이 돼서, hover한것과 다름이 없다

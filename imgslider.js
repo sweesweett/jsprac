@@ -3,12 +3,18 @@ console.log(imgWrapper.children);
 let num = 1;
 
 document.querySelector('#prevBtn').onclick = () => {
+  document
+    .querySelectorAll('img')
+    .forEach((el) => (el.style.transition = 'all ease-out 0.7s'));
   if (num === 1) {
     num = imgWrapper.children.length;
   } else num--;
   moveTo();
 };
 document.querySelector('#nextBtn').onclick = () => {
+  document
+    .querySelectorAll('img')
+    .forEach((el) => (el.style.transition = 'all ease-out 0.7s'));
   if (num === imgWrapper.children.length) {
     num = 1;
   } else num++;
@@ -41,6 +47,9 @@ function navigateImg(e) {
   if (e.target.classList.contains('circle')) {
     const className = e.target.classList[1];
     num = Number(className[className.length - 1]);
+    document
+      .querySelectorAll('img')
+      .forEach((el) => (el.style.transition = 'unset'));
     moveTo();
   } else {
     return;
