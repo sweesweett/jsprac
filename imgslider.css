@@ -95,13 +95,14 @@
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.6);
 }
+
 #nextBtn {
   position: absolute;
   top: 50%;
   border-radius: 50%;
   padding: 10px;
   border: none;
-  right: calc(50% - 100px);
+  right: calc(50% - 250px);
   font-size: 32px;
   z-index: 10;
   transform: translate(50%, -50%);
