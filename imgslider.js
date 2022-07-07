@@ -1,5 +1,4 @@
 const imgWrapper = document.querySelector('.img__wrapper');
-console.log(imgWrapper.children);
 let num = 1;
 
 document.querySelector('#prevBtn').onclick = () => {
