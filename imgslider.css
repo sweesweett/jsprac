@@ -82,7 +82,24 @@
 .container .sliderCircle > .circle.colored {
   background-color: rgb(240, 255, 255);
 }
-
+.container .playPause {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: calc(50% + 100px);
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+.container .playPause > button {
+  border: none;
+  font-size: 16px;
+  padding: 1px;
+  background-color: rgb(240, 255, 255);
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+}
 #prevBtn {
   position: absolute;
   top: 50%;

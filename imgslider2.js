@@ -8,8 +8,6 @@ document.querySelector('#nextBtn').onclick = () => {
     num++;
   }
   imgWrapper.style.left = `-${num * newWidth}px`;
-
-  // boxParaRule.style.setProperty('border', newBorder);
 };
 document.querySelector('#prevBtn').onclick = () => {
   if (num === 0) {
