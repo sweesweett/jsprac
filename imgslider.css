@@ -78,6 +78,7 @@
   background-color: rgba(240, 255, 255, 0.6);
   border-radius: 50%;
   margin: 5px;
+  cursor: pointer;
 }
 .container .sliderCircle > .circle.colored {
   background-color: rgb(240, 255, 255);
@@ -111,6 +112,7 @@
   font-size: 32px;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 
 #nextBtn {
@@ -125,4 +127,5 @@
   transform: translate(50%, -50%);
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
