@@ -7,13 +7,15 @@ document.querySelector('#nextBtn').onclick = () => {
   } else {
     num++;
   }
+
   imgWrapper.style.left = `-${num * newWidth}px`;
 };
 document.querySelector('#prevBtn').onclick = () => {
   if (num === 0) {
-    num = imgWrapper.children.length;
+    num = imgWrapper.children.length - 1;
+  } else {
+    num--;
   }
-  num--;
 
   imgWrapper.style.left = `-${num * newWidth}px`;
 };
