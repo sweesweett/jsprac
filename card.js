@@ -33,20 +33,22 @@ function onPointerDown(e) {
   console.log(startX, startY);
   firstCard.addEventListener('pointermove', onPointerMove);
   firstCard.addEventListener('pointerup', onPointerUp);
+  firstCard.addEventListener('pointerleave', onPointerUp);
 }
 function onPointerMove(e) {
   moveX = e.clientX - startX;
   moveY = e.clientY - startY;
-  firstCard.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) rotate(${10}deg)`;
+  firstCard.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) rotate(${-10}deg)`;
   console.log(moveX, moveY);
 }
 function onPointerUp(e) {
-  firstCard.removeEventListener('pointerdown', onPointerDown);
   firstCard.removeEventListener('pointermove', onPointerMove);
-  // firstCard.removeEventListener('pointerleave', onPointerUp);
-  // firstCard.addEventListener('pointerdown', onPointerDown);
-  let prev = firstCard;
-  let next = prev.nextElementSibling;
-  console.log(next);
-  // addEventListener(next);
+  firstCard.removeEventListener('pointerup', onPointerUp);
+  firstCard.removeEventListener('pointerleave', onPointerUp);
+
+  if (Math.abs(moveX) > frame.clientWidth / 2) {
+    firstCard.removeEventListener('pointerdown', onPointerDown);
+  } else {
+    firstCard.style.transform = `translate3d(0px, 0px, 0)`;
+  }
 }
