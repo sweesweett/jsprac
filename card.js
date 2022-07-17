@@ -13,7 +13,7 @@ let startX = 0, //마우스가 터치를 시작한 위치 x
   startY = 0, // 마우스가 터치를 시작한 위치 y
   moveX = 0,
   moveY = 0;
-const firstCard = document.querySelector('.card:last-child');
+let firstCard = document.querySelector('.card:last-child');
 const secondCard = document.querySelector('.card:nth-last-child(2)');
 const thirdCard = document.querySelector('.card:nth-last-child(3)');
 addEventListener(firstCard);
@@ -27,10 +27,17 @@ function prependCard() {
 function addEventListener(card) {
   card.addEventListener('pointerdown', onPointerDown);
 }
+function setTransform(x, y, deg, dur) {
+  firstCard.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${deg}deg)`;
+  if (dur) {
+    firstCard.style.transition = `transform ${dur}ms`;
+  }
+}
 function onPointerDown(e) {
   startX = e.clientX;
   startY = e.clientY;
   console.log(startX, startY);
+  console.log(firstCard);
   firstCard.addEventListener('pointermove', onPointerMove);
   firstCard.addEventListener('pointerup', onPointerUp);
   firstCard.addEventListener('pointerleave', onPointerUp);
@@ -38,7 +45,7 @@ function onPointerDown(e) {
 function onPointerMove(e) {
   moveX = e.clientX - startX;
   moveY = e.clientY - startY;
-  firstCard.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) rotate(${-10}deg)`;
+  setTransform(moveX, moveY, (moveX / innerWidth) * 80, 100);
   console.log(moveX, moveY);
 }
 function onPointerUp(e) {
@@ -46,9 +53,30 @@ function onPointerUp(e) {
   firstCard.removeEventListener('pointerup', onPointerUp);
   firstCard.removeEventListener('pointerleave', onPointerUp);
 
-  if (Math.abs(moveX) > frame.clientWidth / 2) {
+  if (Math.abs(moveX) > frame.clientWidth / 2 + 30) {
     firstCard.removeEventListener('pointerdown', onPointerDown);
+    fly();
   } else {
-    firstCard.style.transform = `translate3d(0px, 0px, 0)`;
+    setTransform(0, 0, 0);
   }
 }
+function fly() {
+  const flyX = (Math.abs(moveX) / moveX) * innerWidth * 1.1;
+  const flyY = (moveY / moveX) * flyX;
+  setTransform(flyX, flyY, (flyX / innerWidth) * 80, innerWidth * 0.8);
+  let prev = firstCard;
+  firstCard = prev.previousElementSibling;
+  setTimeout(() => frame.removeChild(prev), 500);
+  prependCard(prev);
+  addEventListener(firstCard);
+}
+document.getElementById('like').onclick = () => {
+  moveX = -1;
+  moveY = 0;
+  fly();
+};
+document.getElementById('dislike').onclick = () => {
+  moveX = 1;
+  moveY = 0;
+  fly();
+};
