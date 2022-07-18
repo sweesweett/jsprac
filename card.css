@@ -25,7 +25,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-position: center center;
-  cursor: pointer;
+  cursor: grab;
   user-select: none; /*인터넷에 찾아서 정리하기 - 사용자가 텍스트를 선택할 수 있는 지 */
   touch-action: none; /* 인터넷에 찾아서 정리하기2 여기서는 이게있어야 모바일에서 동작한다고 함!*/
   /* touch-action : none 의 선언은 브라우저의 확대 / 축소 작동을 제한하여 텍스트의 크기를 고정하기 때문에, 사용자의 접근성을 보장하지 못하는 문제를 가지고 있습니다. 오잉*/
@@ -45,4 +45,29 @@ body {
   right: -30px;
   display: flex;
   filter: brightness(0.8);
+}
+.btns {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  width: 360px;
+  justify-content: center;
+}
+.btns button {
+  padding: 10px;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  filter: drop-shadow(-1px 3px 0px rgb(81, 81, 81));
+  transition: all 0.3s;
+}
+.btns button:hover {
+  transform: scale(1.1);
+  color: rgb(96, 178, 216);
+  filter: drop-shadow(-1px 3px 0px rgb(12, 91, 127));
+}
+.btns button:first-child {
+  margin-right: 20px;
 }

@@ -45,7 +45,7 @@ function onPointerDown(e) {
 function onPointerMove(e) {
   moveX = e.clientX - startX;
   moveY = e.clientY - startY;
-  setTransform(moveX, moveY, (moveX / innerWidth) * 80, 100);
+  setTransform(moveX, moveY, (moveX / innerWidth) * 60, 100);
   console.log(moveX, moveY);
 }
 function onPointerUp(e) {
