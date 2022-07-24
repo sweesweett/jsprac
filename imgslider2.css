@@ -22,6 +22,7 @@
   border-width: 2px 3px 1px 0px;
   border-color: rgb(212, 212, 212);
   border-style: solid;
+  cursor: grab;
 }
 .container .img__wrapper {
   overflow: hidden;
@@ -33,6 +34,7 @@
   position: absolute;
   left: 0;
   transition: transform 0.5s;
+  touch-action: none;
 }
 .container .img__wrapper img {
   width: 400px;

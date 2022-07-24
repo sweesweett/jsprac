@@ -1,10 +1,11 @@
 const imgWrapper = document.querySelector('.img__wrapper');
-// const visibleImg = document.querySelector('.img__visible');
+const visibleImg = document.querySelector('.img__visible');
 const newWidth = document.querySelector('.img__visible').offsetWidth;
 let num = 0;
-let startX = 0,
-  moveX = 0;
-document.querySelector('#nextBtn').onclick = () => {
+let startX = 0;
+moveX = 0;
+
+function toNext() {
   if (num === imgWrapper.children.length - 1) {
     num = 0;
   } else {
@@ -12,8 +13,8 @@ document.querySelector('#nextBtn').onclick = () => {
   }
 
   imgWrapper.style.transform = `translateX(-${num * newWidth}px)`;
-};
-document.querySelector('#prevBtn').onclick = () => {
+}
+function toPrev() {
   if (num === 0) {
     num = imgWrapper.children.length - 1;
   } else {
@@ -21,17 +22,29 @@ document.querySelector('#prevBtn').onclick = () => {
   }
 
   imgWrapper.style.transform = `translateX(-${num * newWidth}px)`;
-};
-// visibleImg.addEventListener('pointerdown', onPointerDown);
-// function onPointerDown(e) {
-//   startX = e.clientX;
+}
 
-//   console.log(startX);
-//   visibleImg.addEventListener('pointermove', onPointerMove);
-// }
-// function onPointerMove(e) {
-//   moveX = e.clientX - startX;
+function onPointerDown(e) {
+  startX = e.clientX + num * newWidth;
+  console.log(startX);
+  visibleImg.addEventListener('pointermove', onPointerMove);
+  visibleImg.addEventListener('pointerup', onPointerUp);
+  visibleImg.addEventListener('pointerleave', onPointerUp);
+}
+function onPointerMove(e) {
+  moveX = e.clientX - startX;
+  // console.log(moveX);
+  imgWrapper.style.transform = `translateX(${moveX}px)`;
+} // 왜안될까
+function onPointerUp(e) {
+  visibleImg.removeEventListener('pointermove', onPointerMove);
+  visibleImg.removeEventListener('pointerup', onPointerUp);
+  visibleImg.removeEventListener('pointerleave', onPointerUp);
+  if (Math.abs(moveX) > (num + 0.5) * newWidth) {
+    toNext();
+  }
+}
 
-//   console.log(moveX);
-//   imgWrapper.style.transform = `rotate(${moveX}deg)`;
-// } // 왜안될까
+document.querySelector('#nextBtn').onclick = toNext;
+document.querySelector('#prevBtn').onclick = toPrev;
+visibleImg.addEventListener('pointerdown', onPointerDown);
