@@ -78,10 +78,12 @@ function onPointerUp(e) {
   visibleImg.removeEventListener('pointermove', onPointerMove);
   visibleImg.removeEventListener('pointerup', onPointerUp);
   visibleImg.removeEventListener('pointerleave', onPointerUp);
-  if (Math.abs(moveX) > (num + 0.5) * newWidth) {
+  if (Math.abs(moveX) > (num + 0.6) * newWidth) {
     toNext();
-  } else if (Math.abs(moveX) < (num - 0.5) * newWidth) {
+  } else if (Math.abs(moveX) < (num - 0.6) * newWidth) {
     toPrev();
+  } else {
+    imgWrapper.style.transform = `translateX(-${num * newWidth}px)`;
   }
 }
 

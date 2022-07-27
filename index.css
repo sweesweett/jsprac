@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 * {
   text-align: center;
 }
@@ -22,10 +23,33 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px;
 }
 li {
   list-style: none;
+}
+.practice__wrapper h2 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  /* -webkit-text-stroke: 1px #0091ca; */
+  background-image: linear-gradient(
+    90deg,
+    #8bdeff 0%,
+    #0091ca 50%,
+    #8bdeff 100%
+  );
+  /* background-image: radial-gradient(
+    #8bdeff,
+    #8bdeff 10px,
+    #0091ca 10px #0091ca
+  ); */
+  -webkit-background-clip: text;
+  background-position: 50% 50%;
+  background-size: 0% 100%;
+  color: transparent;
+  background-repeat: no-repeat;
+  margin: 10px;
+  transition: all 0.7s ease-in;
 }
 .practice__wrapper .prac {
   display: flex;
@@ -58,7 +82,7 @@ li {
 .practice__wrapper .prac .dropdown__list .prac__list {
   display: none;
   position: absolute;
-  top: 170px;
+  top: 180px;
   text-align: center;
   margin: 10px;
   padding: 10px;
@@ -99,8 +123,4 @@ li {
   width: 85%;
   opacity: 1;
   font-weight: 700;
-  transform: skew(2deg, 2deg);
-}
-.custom-shape-divider-top-1654431782 {
-  fill: rgba(94, 190, 197, 0.664);
 }

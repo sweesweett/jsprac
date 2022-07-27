@@ -1,6 +1,10 @@
 const previewUl = document.querySelector('.preview__ul');
 const pracList = document.querySelector('.prac__list');
 const toggle = document.querySelector('.toggle');
+const title = document.querySelector('.title');
+setTimeout(() => {
+  title.style.backgroundSize = '100% 100%';
+}, 200);
 previewUl.addEventListener('click', () => {
   pracList.style.display = 'block';
   toggle.style.transform = 'rotate(180deg)';

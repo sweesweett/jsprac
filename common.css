@@ -21,8 +21,8 @@ body {
   background: rgba(255, 209, 193, 1);
   background: linear-gradient(
     120deg,
-    rgb(166, 227, 255) 0%,
-    rgba(255, 209, 193, 1) 100%
+    rgb(147, 221, 255) 0%,
+    rgb(255, 199, 181) 100%
   );
 }
 .container {
@@ -54,5 +54,5 @@ body {
   z-index: -1;
 }
 .custom-shape-divider-top-1654431782 {
-  fill: rgba(94, 190, 197, 0.664);
+  fill: rgba(93, 167, 201, 0.4);
 }
