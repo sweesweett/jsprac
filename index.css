@@ -32,12 +32,7 @@ li {
   font-weight: 700;
   font-size: 50px;
   /* -webkit-text-stroke: 1px #0091ca; */
-  background-image: linear-gradient(
-    90deg,
-    #8bdeff 0%,
-    #0091ca 50%,
-    #8bdeff 100%
-  );
+
   /* background-image: radial-gradient(
     #8bdeff,
     #8bdeff 10px,
@@ -45,11 +40,14 @@ li {
   ); */
   -webkit-background-clip: text;
   background-position: 50% 50%;
-  background-size: 0% 100%;
+
   color: transparent;
   background-repeat: no-repeat;
   margin: 10px;
-  transition: all 0.7s ease-in;
+  /* transition: all 0.7s ease-in; */
+  animation: title 0.7s 1 ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 .practice__wrapper .prac {
   display: flex;
@@ -123,4 +121,42 @@ li {
   width: 85%;
   opacity: 1;
   font-weight: 700;
+}
+@keyframes title {
+  0% {
+    background-image: linear-gradient(
+      90deg,
+      rgb(139, 222, 255) 0%,
+      rgb(20, 156, 210) 15%,
+      rgb(59, 178, 225) 25%,
+      rgb(95, 198, 238) 45%,
+      rgb(95, 198, 238) 55%,
+      rgb(0, 145, 202) 75%,
+      rgb(18, 155, 209) 85%,
+      rgb(139, 222, 255, 1) 100%
+    );
+
+    background-size: 0% 100%;
+  }
+  /* 50% {
+    background-image: linear-gradient(
+      90deg,
+      #62d3ff 0%,
+      #0091ca 50%,
+      #62d3ff 100%
+    );
+  } */
+
+  60% {
+    background-image: linear-gradient(
+      90deg,
+      #62d3ff 0%,
+      #0091ca 50%,
+      #62d3ff 100%
+    );
+  }
+  100% {
+    background-image: linear-gradient(0deg, #0091ca, #0091ca);
+    background-size: 100% 100%;
+  }
 }

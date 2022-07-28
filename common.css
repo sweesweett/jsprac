@@ -24,6 +24,7 @@ body {
     rgb(147, 221, 255) 0%,
     rgb(255, 199, 181) 100%
   );
+  overflow: hidden;
 }
 .container {
   position: absolute;
@@ -55,4 +56,22 @@ body {
 }
 .custom-shape-divider-top-1654431782 {
   fill: rgba(93, 167, 201, 0.4);
+  animation: backWave 5s infinite ease-in;
+}
+@keyframes backWave {
+  0%,
+  100% {
+    fill: rgba(93, 167, 201, 0.4);
+  }
+  20%,
+  80% {
+    fill: rgba(93, 149, 201, 0.4);
+    transform: scale3d(1.02, 1.05, 0.95) translateX(-5px);
+  }
+  40%,
+  60% {
+    fill: rgba(93, 120, 201, 0.4);
+    /* transform: scaleY(1.1); */
+    transform: scale3d(1.05, 1.1, 0.9) translateX(-10px);
+  }
 }

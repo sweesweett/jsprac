@@ -2,9 +2,12 @@ const previewUl = document.querySelector('.preview__ul');
 const pracList = document.querySelector('.prac__list');
 const toggle = document.querySelector('.toggle');
 const title = document.querySelector('.title');
-setTimeout(() => {
-  title.style.backgroundSize = '100% 100%';
-}, 200);
+// setTimeout(() => {
+//   title.style.backgroundSize = '100% 100%';
+//   setTimeout(() => {
+//     title.style.backgroundImage = 'linear-gradient(0deg,#0091ca,#0091ca)';
+//   }, 700);
+// }, 200);
 previewUl.addEventListener('click', () => {
   pracList.style.display = 'block';
   toggle.style.transform = 'rotate(180deg)';
