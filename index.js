@@ -8,6 +8,37 @@ const title = document.querySelector('.title');
 //     title.style.backgroundImage = 'linear-gradient(0deg,#0091ca,#0091ca)';
 //   }, 700);
 // }, 200);
+const colors = [
+  '#ef5350',
+  '#ec407a',
+  '#ab47bc',
+  '#7e57c2',
+  '#42a5f5',
+  '#26c6da',
+  '#d4e157',
+  '#ffee58',
+  '#ff7043',
+];
+window.addEventListener('click', (e) => {
+  const circle = document.createElement('div');
+  circle.className = 'circle';
+  circle.style.setProperty('--x', `${e.clientX - 50}px`);
+  circle.style.setProperty('--y', `${e.clientY - 50}px`);
+  console.log(e.clientX, e.clientY);
+  circle.style.setProperty(
+    '--color1',
+    `${colors[Math.floor(Math.random() * colors.length)]}2b`
+  );
+  circle.style.setProperty(
+    '--color2',
+    colors[Math.floor(Math.random() * colors.length)]
+  );
+  // circle.style.transform = `translate(${e.clientX - 50}px,${e.clientY - 50}px)`;
+  document.body.append(circle);
+  // circle.style.opacity = 0;
+  setTimeout(() => document.body.removeChild(circle), 1000);
+});
+
 previewUl.addEventListener('click', () => {
   pracList.style.display = 'block';
   toggle.style.transform = 'rotate(180deg)';
