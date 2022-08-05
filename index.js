@@ -19,26 +19,49 @@ const colors = [
   '#ffee58',
   '#ff7043',
 ];
-window.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
+  // const circle = document.createElement('div');
+  // circle.className = 'circle';
+  // circle.style.setProperty('--x', `${e.clientX - 50}px`);
+  // circle.style.setProperty('--y', `${e.clientY - 50}px`);
+  // console.log(e.clientX, e.clientY);
+  // circle.style.setProperty(
+  //   '--color1',
+  //   `${colors[Math.floor(Math.random() * colors.length)]}2b`
+  // );
+  // circle.style.setProperty(
+  //   '--color2',
+  //   colors[Math.floor(Math.random() * colors.length)]
+  // );
+  // // circle.style.transform = `translate(${e.clientX - 50}px,${e.clientY - 50}px)`;
+  // document.body.append(circle);
+  // // circle.style.opacity = 0;
+  // setTimeout(() => document.body.removeChild(circle), 1000);
+  let x = e.clientX;
+  let y = e.clientY;
+
+  for (let i = 0; i < 5; i++) {
+    randomCircle(x, y);
+  }
+});
+function randomRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+function randomCircle(x, y) {
   const circle = document.createElement('div');
+  let width = randomRange(10, 70);
   circle.className = 'circle';
-  circle.style.setProperty('--x', `${e.clientX - 50}px`);
-  circle.style.setProperty('--y', `${e.clientY - 50}px`);
-  console.log(e.clientX, e.clientY);
+  circle.style.setProperty('--width', `${width}px`);
+  circle.style.setProperty('--x', `${x - width + randomRange(-30, 30)}px`);
+  circle.style.setProperty('--y', `${y - width + randomRange(-30, 30)}px`);
+  circle.style.setProperty('--duration', `${randomRange(5, 10) * 100}ms`);
   circle.style.setProperty(
     '--color1',
     `${colors[Math.floor(Math.random() * colors.length)]}2b`
   );
-  circle.style.setProperty(
-    '--color2',
-    colors[Math.floor(Math.random() * colors.length)]
-  );
-  // circle.style.transform = `translate(${e.clientX - 50}px,${e.clientY - 50}px)`;
   document.body.append(circle);
-  // circle.style.opacity = 0;
   setTimeout(() => document.body.removeChild(circle), 1000);
-});
-
+}
 previewUl.addEventListener('click', () => {
   pracList.style.display = 'block';
   toggle.style.transform = 'rotate(180deg)';
