@@ -20,26 +20,8 @@ const colors = [
   '#ff7043',
 ];
 document.addEventListener('click', (e) => {
-  // const circle = document.createElement('div');
-  // circle.className = 'circle';
-  // circle.style.setProperty('--x', `${e.clientX - 50}px`);
-  // circle.style.setProperty('--y', `${e.clientY - 50}px`);
-  // console.log(e.clientX, e.clientY);
-  // circle.style.setProperty(
-  //   '--color1',
-  //   `${colors[Math.floor(Math.random() * colors.length)]}2b`
-  // );
-  // circle.style.setProperty(
-  //   '--color2',
-  //   colors[Math.floor(Math.random() * colors.length)]
-  // );
-  // // circle.style.transform = `translate(${e.clientX - 50}px,${e.clientY - 50}px)`;
-  // document.body.append(circle);
-  // // circle.style.opacity = 0;
-  // setTimeout(() => document.body.removeChild(circle), 1000);
   let x = e.clientX;
   let y = e.clientY;
-
   for (let i = 0; i < 5; i++) {
     randomCircle(x, y);
   }

@@ -24,6 +24,9 @@ body {
     rgb(147, 221, 255) 0%,
     rgb(255, 199, 181) 100%
   );
+  background-clip: border-box;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 .container {
@@ -57,6 +60,7 @@ body {
 .custom-shape-divider-top-1654431782 {
   fill: rgba(93, 167, 201, 0.4);
   animation: backWave 5s infinite ease-in;
+  animation-fill-mode: both;
 }
 @keyframes backWave {
   0%,
